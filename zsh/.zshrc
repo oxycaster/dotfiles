@@ -113,6 +113,11 @@ eval "$(sheldon source)"
     export CLICOLOR=true
     # 補完候補に色を付ける
     zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+
+    # killコマンドをプロセス名から補完する
+    # See: https://qiita.com/mollifier/items/33bda290fe3c0ae7b3bb
+    zstyle ':completion:*:processes' command "ps aux"
+    zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 }
 
 
