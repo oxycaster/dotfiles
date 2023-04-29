@@ -1,0 +1,61 @@
+# `sheldon` configuration file
+# ----------------------------
+#
+# You can modify this file directly or you can use one of the following
+# `sheldon` commands which are provided to assist in editing the config file:
+#
+# - `sheldon add` to add a new plugin to the config file
+# - `sheldon edit` to open up the config file in the default editor
+# - `sheldon remove` to remove a plugin from the config file
+#
+# See the documentation for more https://github.com/rossmacarthur/sheldon#readme
+
+shell = "zsh"
+
+
+[plugins]
+
+## プラグインの遅延読み込みを行うためのプラグイン
+[plugins.zsh-defer]
+github = "romkatv/zsh-defer"
+
+
+## Additional completion definitions for Zsh.
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"
+apply = ["defer"]
+
+
+## Fish-like autosuggestions for zsh
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+apply = ["defer"]
+
+
+## Fish shell like syntax highlighting for Zsh.
+[plugins.zsh-syntax-highlighting]
+github = "zsh-users/zsh-syntax-highlighting"
+apply = ["defer"]
+
+
+## peco/percol/fzf wrapper plugin for zsh
+[plugins.anyframe]
+github = "mollifier/anyframe"
+apply = ["defer"]
+
+
+## A next-generation cd command with your interactive filter
+[plugins.enhancd]
+github = "b4b4r07/enhancd"
+apply = ["defer"]
+
+
+
+
+[templates]
+## zsh-deferを使うための設定
+defer = "{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}"
+
+## fzfをインストールして読み込む設定
+#fzf-install = "{{ dir }}/install --bin > /dev/null \n[[ ! $PATH =~ {{ dir }} ]] && export PATH=\"$PATH:{{ dir }}/bin\"\n"
+#fzf-source = "{% for file in files %}source \"{{ file }}\"\n{% endfor %}"
