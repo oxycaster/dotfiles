@@ -251,6 +251,14 @@ bitrwx() { echo "obase=8; ibase=2; $1" | bc }
 gi() { curl -sL https://www.gitignore.io/api/$@ ;}
 whouseport() { lsof -n -P -i :$@ ;}
 
+paste-as-yank() {
+  PASTE=$(pbpaste)
+  LBUFFER="$LBUFFER${RBUFFER:0:1}"
+  RBUFFER="$PASTE${RBUFFER:1:${#RBUFFER}}"
+}
+zle -N paste-as-yank
+bindkey "^y" paste-as-yank
+
 
 ##
 ## 環境変数の設定
