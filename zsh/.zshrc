@@ -291,4 +291,4 @@ source $HOME/.cargo/env
 
 # go
 export GOPATH=$HOME/.go
-export PATH=$PATH:$HOME/.go/bin
+export PATH=$PATH:$HOME/.go/binexport PATH="/opt/homebrew/opt/node@18/bin:$PATH"

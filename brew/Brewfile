@@ -1,8 +1,6 @@
 tap "heroku/brew"
 tap "homebrew/bundle"
 brew "awscli"
-brew "node"
-brew "corepack"
 brew "fzf"
 brew "graphviz"
 brew "lerna"
