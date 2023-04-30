@@ -292,3 +292,6 @@ source $HOME/.cargo/env
 # go
 export GOPATH=$HOME/.go
 export PATH=$PATH:$HOME/.go/binexport PATH="/opt/homebrew/opt/node@18/bin:$PATH"
+
+# nodejs by homebrew
+export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
