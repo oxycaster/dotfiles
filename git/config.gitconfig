@@ -8,11 +8,11 @@
   ui = auto
 
 [push]
-  default = tracking       # defaultのpush先はtrackingしているリポジトリ
+  default = tracking  # defaultのpush先はtrackingしているリポジトリ
 
 [core]
-  editor = idea # デフォルトエディタを指定
-	excludesfile = /Users/***REMOVED***/.gitignore
+  editor = idea  # デフォルトエディタを指定
+  excludesfile = ~/.config/git/.gitignore
   autocrlf = input
   whitespace = cr-at-eol
   quotepath = false
@@ -22,10 +22,10 @@
   sh = show
   so = remote show origin
   ft = fetch
-  up = pull --rebase       # pull rebase
-  rbm = rebase master      # masterへのrebaseはよく使うのでalias
+  up = pull --rebase  # pull rebase
+  rbm = rebase main  # mainへのrebaseはよく使うのでalias
   ad = add
-  ci = commit -a           # modifiedなファイルを全てstageへ
+  ci = commit -a  # modifiedなファイルを全てstageへ
   cam = commit -a --amend  # 直前のcommitを修正
   co = checkout
   
@@ -49,7 +49,7 @@
   log-all = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
   
   # diff関連
-  dm = diff master           # masterとのdiff
+  dm = diff main           # mainとのdiff
   dw = diff --color-words    # 単語単位でいろつけてdiff
   dc = diff --cached         # addされているものとのdiff
   ds = diff --staged         # 同上(1.6.1移行)
@@ -80,8 +80,8 @@
   keepBackup = false
 
 [mergetool "diffmerge"]
-	cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
-	trustExitCode = true
+  cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
+  trustExitCode = true
 
 [mergetool "p4merge"]
   path = p4merge
@@ -89,29 +89,29 @@
   trustExitCode = false
 
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
 
 [http]
-	postBuffer = 242880
+  postBuffer = 242880
 
 [filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
 
 [commit]
-	template = /Users/***REMOVED***/.stCommitMsg
+  template = ~/.config/git/.stCommitMsg
 
 [init]
-	defaultBranch = main
+  defaultBranch = main
 
 [user]
-    useConfigOnly = true
-	name =
-	email =
+  useConfigOnly = true
+  name =
+  email =
