@@ -278,12 +278,15 @@ export MYSQL_PS1="[\R:\m:\s \u@mysql://`hostname`/\d] > "
 export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 export PUPPETEER_EXECUTABLE_PATH=`which chromium`
 
-
-# brewで入れたmysqlコマンドのパスを通す
-export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+# ${HOME}/binディレクトリへのパスを通す
+# ユーザー固有実行バイナリやシェルスクリプトなどを置く場所
+export PATH="$HOME/bin:$PATH"
 
 # poetry
 export PATH="$HOME/.local/bin:$PATH"
+
+# brewで入れたmysqlコマンドのパスを通す
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 
 # rust/cargo
 export PATH="$HOME/.cargo/bin:$PATH"
