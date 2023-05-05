@@ -207,10 +207,7 @@ eval "$(sheldon source)"
 
     # export PATH="/usr/local/sbin:$PATH"
 
-#    alias brew="env PATH=${PATH/\/Users\/***REMOVED***\/\.anyenv\/envs\/pyenv\/shims:/} brew"
-
     alias procport="lsof -nPi"
-    alias slackcat2***REMOVED***="slackcat --channel ***REMOVED***:***REMOVED*** --tee"
     alias tree="tree -N"
 
     alias dl=wget --content-disposition
