@@ -298,3 +298,6 @@ export PATH=$PATH:$HOME/.go/binexport PATH="/opt/homebrew/opt/node@18/bin:$PATH"
 
 # nodejs by homebrew
 export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
+
+# IntelliJ IDEA のシェルスクリプトideaコマンドのパスを通す
+export PATH="/Users/${USER}/Library/Application Support/JetBrains/Toolbox/scripts:$PATH"
