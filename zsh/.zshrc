@@ -25,7 +25,7 @@ eval "$(sheldon source)"
     setopt extended_history               # 履歴ファイルに時刻を記録
     setopt append_history        # 履歴を追加 (毎回 .zsh_history を作るのではなく)
     setopt hist_ignore_dups # 直前と同じコマンドをヒストリに追加しない
-    setopt hist_ignore_all_dups # 重複するコマンドは古い法を削除する
+    setopt hist_ignore_all_dups # 重複するコマンドは古い方を削除する
     setopt share_history # 異なるウィンドウでコマンドヒストリを共有する
     setopt hist_no_store # historyコマンドは履歴に登録しない
     setopt hist_reduce_blanks # 余分な空白は詰めて記録
@@ -298,3 +298,19 @@ export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
 
 # IntelliJ IDEA のシェルスクリプトideaコマンドのパスを通す
 export PATH="/Users/${USER}/Library/Application Support/JetBrains/Toolbox/scripts:$PATH"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/homebrew/Caskroom/miniforge/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/homebrew/Caskroom/miniforge/base/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
