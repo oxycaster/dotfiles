@@ -316,3 +316,6 @@ unset __conda_setup
 
 # rbenv
 eval "$(rbenv init -)"
+
+# asdf
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
