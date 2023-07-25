@@ -12,7 +12,7 @@
 
 [core]
   editor = idea  # デフォルトエディタを指定
-  excludesfile = ~/.config/git/.gitignore
+  # excludesfile = ~/.config/git/.gitignore
   autocrlf = input
   whitespace = cr-at-eol
   quotepath = false
