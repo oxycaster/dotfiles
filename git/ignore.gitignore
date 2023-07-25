@@ -94,3 +94,5 @@ fabric.properties
 
 ## Next.js
 .next/
+
+.tool-versions
