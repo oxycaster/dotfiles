@@ -96,3 +96,6 @@ fabric.properties
 .next/
 
 .tool-versions
+
+## IntelliJ IDEA Run and Configuration Project Setting Directory
+.run
