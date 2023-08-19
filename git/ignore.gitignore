@@ -99,3 +99,6 @@ fabric.properties
 
 ## IntelliJ IDEA Run and Configuration Project Setting Directory
 .run
+
+## プロジェクト管理に含めたくない、自分専用のファイルなどを入れる聖域
+.me/
