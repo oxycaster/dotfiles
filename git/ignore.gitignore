@@ -102,3 +102,7 @@ fabric.properties
 
 ## プロジェクト管理に含めたくない、自分専用のファイルなどを入れる聖域
 .me/
+
+# BuildServerProtocol(BSP) sbt 1.4以降勝手に作られるようになっており
+# .bsp/sbt.json の中にはローカルのユーザー名を含んだパスが入っているのでignoreする
+.bsp/
