@@ -272,8 +272,8 @@ export XDG_STATE_HOME="${HOME}/.local/state"
 export PIPENV_VENV_IN_PROJECT=true
 export MYSQL_PS1="[\R:\m:\s \u@mysql://`hostname`/\d] > "
 
-export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
-export PUPPETEER_EXECUTABLE_PATH=`which chromium`
+#export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+#export PUPPETEER_EXECUTABLE_PATH=`which chromium`
 
 # ${HOME}/binディレクトリへのパスを通す
 # ユーザー固有実行バイナリやシェルスクリプトなどを置く場所
