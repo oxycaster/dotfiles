@@ -11,7 +11,7 @@
   default = tracking  # defaultのpush先はtrackingしているリポジトリ
 
 [core]
-  editor = idea  # デフォルトエディタを指定
+  # editor = idea -e  # デフォルトエディタを指定
   # excludesfile = ~/.config/git/.gitignore
   autocrlf = input
   whitespace = cr-at-eol
