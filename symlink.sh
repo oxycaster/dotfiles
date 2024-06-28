@@ -22,6 +22,8 @@ mkdir -p "${XDG_CONFIG_HOME}/zsh"
 ln -isvn "${SCRIPT_DIR}/zsh/.zshenv" "${HOME}/.zshenv"
 ln -isvn "${SCRIPT_DIR}/zsh/.zshrc" "${XDG_CONFIG_HOME}/zsh/.zshrc"
 
+mkdir -p "${XDG_CONFIG_HOME}/bash"
+ln -isvn "${SCRIPT_DIR}/bash/bashrc" "${HOME}/.bashrc"
 
 mkdir -p "${XDG_CONFIG_HOME}/git"
 ln -isvn "${SCRIPT_DIR}/git/config.gitconfig" "${XDG_CONFIG_HOME}/git/config"
