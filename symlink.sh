@@ -30,3 +30,6 @@ ln -isvn "${SCRIPT_DIR}/git/config.gitconfig" "${XDG_CONFIG_HOME}/git/config"
 ln -isvn "${SCRIPT_DIR}/git/ignore.gitignore" "${XDG_CONFIG_HOME}/git/ignore"
 
 ln -isvn "${SCRIPT_DIR}/starship/starship.toml" "${XDG_CONFIG_HOME}/starship.toml"
+
+mkdir -p "${XDG_CONFIG_HOME}/wezterm"
+ln -isvn "${SCRIPT_DIR}/wezterm/wezterm.lua" "${XDG_CONFIG_HOME}/wezterm/wezterm.lua"
