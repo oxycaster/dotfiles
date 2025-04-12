@@ -28,3 +28,5 @@ ln -isvn "${SCRIPT_DIR}/bash/bashrc" "${HOME}/.bashrc"
 mkdir -p "${XDG_CONFIG_HOME}/git"
 ln -isvn "${SCRIPT_DIR}/git/config.gitconfig" "${XDG_CONFIG_HOME}/git/config"
 ln -isvn "${SCRIPT_DIR}/git/ignore.gitignore" "${XDG_CONFIG_HOME}/git/ignore"
+
+ln -isvn "${SCRIPT_DIR}/starship/starship.toml" "${XDG_CONFIG_HOME}/starship.toml"
