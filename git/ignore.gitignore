@@ -106,3 +106,6 @@ fabric.properties
 # BuildServerProtocol(BSP) sbt 1.4以降勝手に作られるようになっており
 # .bsp/sbt.json の中にはローカルのユーザー名を含んだパスが入っているのでignoreする
 .bsp/
+
+.idea/
+*.iml
