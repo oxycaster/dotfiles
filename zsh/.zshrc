@@ -282,8 +282,6 @@ export PATH="$HOME/bin:$PATH"
 # poetry
 export PATH="$HOME/.local/bin:$PATH"
 
-# brewで入れたmysqlコマンドのパスを通す
-export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 
 # rust/cargo
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -298,6 +296,12 @@ export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
 
 # IntelliJ IDEA のシェルスクリプトideaコマンドのパスを通す
 export PATH="/Users/${USER}/Library/Application Support/JetBrains/Toolbox/scripts:$PATH"
+
+# rbenv
+eval "$(rbenv init -)"
+
+# asdf
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -314,8 +318,12 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# rbenv
-eval "$(rbenv init -)"
+# rye python
+# source "$HOME/.rye/env"
 
-# asdf
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/mysql-client/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/mysql-client/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql-client/lib/pkgconfig"
+
+. "$HOME/.local/share/../bin/env"

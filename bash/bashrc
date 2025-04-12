@@ -1,2 +1,2 @@
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
-. "$HOME/.local/share/../bin/env"
+
+. "$HOME/.cargo/env"
